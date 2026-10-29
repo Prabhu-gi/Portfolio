@@ -226,7 +226,6 @@ export const projectsData: Project[] = [
     category: "EDUCATIONAL & CAREER HUB",
     description: "An end-to-end educational web platform engineered with Java, Spring Boot, React.js, and MySQL. Features dynamic media galleries, modular course hierarchies, student onboarding workflows, and atomic accessible UI components that accelerated frontend feature delivery by 30%.",
     image: "/assets/tega-platform.jpg",
-    icon: "/assets/tega-icon.png",
     tags: ["React.js", "Java", "Spring Boot", "REST APIs", "MySQL", "WCAG A11y"],
     metrics: [
       { label: "Feature Delivery", value: "+30%" },
