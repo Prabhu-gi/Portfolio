@@ -103,6 +103,14 @@ export default function Projects() {
                       </div>
                     )}
 
+                    {/* Localhost environment pill if project runs locally */}
+                    {!project.icon && project.liveDemoUrl && project.liveDemoUrl.includes('localhost') && (
+                      <div className="absolute top-4 right-4 flex items-center gap-1.5 rounded-full bg-black/80 backdrop-blur-md px-3 py-1.5 border border-emerald-500/30 text-emerald-400 shadow-md pointer-events-none text-[11px] font-mono">
+                        <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span>localhost:{project.liveDemoUrl.split(':')[2]?.split('/')[0]}</span>
+                      </div>
+                    )}
+
                     {/* Expand icon on hover (bottom right) */}
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300">
                       <span className="flex items-center gap-1.5 rounded-full bg-black/80 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-white border border-white/20 shadow-md">

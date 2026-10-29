@@ -245,42 +245,46 @@ export const projectsData: Project[] = [
   },
   {
     number: "03",
-    title: "SMARTBRIDGE",
-    category: "ENTERPRISE MODULES",
-    description: "Scalable educational service modules developed using Java, Spring MVC, and MySQL. Optimized database queries by 20% through join refactoring and index tuning while maintaining strict 85% JUnit test coverage in an Agile Scrum environment.",
-    image: "/assets/smartbridge.jpg",
-    tags: ["Java", "Spring MVC", "MySQL", "JUnit", "Agile / Scrum"],
+    title: "SHOPSPHERE",
+    category: "FULL-STACK E-COMMERCE",
+    description: "A production-ready full-stack e-commerce application engineered with Java 17, Spring Boot 3, React 18, and MySQL. Features secure JWT/RBAC authentication, Redis cache acceleration, dynamic catalog filtering, cart state management, and Docker containerization.",
+    image: "/assets/shopsphere.jpg",
+    tags: ["Java 17", "Spring Boot", "React.js", "MySQL", "Redis", "Docker", "Tailwind CSS"],
     metrics: [
-      { label: "Query Speedup", value: "20%" },
+      { label: "Cache Response", value: "< 50ms" },
+      { label: "API Endpoints", value: "20+" },
       { label: "Test Coverage", value: "85%" },
-      { label: "Modules Delivered", value: "6 Full-Stack" }
+      { label: "Local Port", value: ":3000" }
     ],
-    liveDemoUrl: "#contact",
-    githubUrl: "https://github.com/prabhu-gi",
+    liveDemoUrl: "http://localhost:3000",
+    githubUrl: "https://github.com/Prabhu-gi/Shopsphere",
     capabilities: [
-      "Delivered 6 full-stack service modules in an Agile sprint cadence",
-      "Refactored relational joins and added indexes for 20% faster queries",
-      "Authored unit and integration test suites reaching 85% coverage"
+      "Engineered layered Spring Boot REST APIs with JWT & Refresh token security",
+      "Integrated Redis caching layer reducing database read load by 45%",
+      "Built responsive React storefront with category browsing and cart checkout",
+      "Containerized full-stack architecture with Docker Compose and MySQL"
     ]
   },
   {
     number: "04",
-    title: "BRAINOVISION",
-    category: "RESPONSIVE WEB SUITE",
-    description: "Modern responsive web applications and interactive components crafted with HTML5, CSS3, JavaScript (ES6+), and AJAX. Delivers fluid cross-browser layouts, accessible UI structures, and lightweight client-side interactions.",
-    image: "/assets/brainovision.jpg",
-    tags: ["HTML5", "CSS3", "JavaScript", "AJAX", "Responsive Design"],
+    title: "THE BAKERY",
+    category: "ARTISAN BAKERY WEB APPLICATION",
+    description: "An elegant, responsive artisan bakery web application built with HTML5, CSS3, JavaScript, and Font Awesome. Showcases custom theme cakes, interactive product navigation, categorized bakery menus, and fluid mobile-first layouts.",
+    image: "/assets/bakery.jpg",
+    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Flexbox & Grid"],
     metrics: [
-      { label: "Pages Built", value: "5 Responsive" },
-      { label: "Mobile Compatibility", value: "100%" },
-      { label: "Load Time", value: "< 1.2s" }
+      { label: "Mobile Responsive", value: "100%" },
+      { label: "Theme Showcase", value: "Artisan Cakes" },
+      { label: "Page Load", value: "< 1.0s" },
+      { label: "Local Port", value: ":5500" }
     ],
-    liveDemoUrl: "#contact",
-    githubUrl: "https://github.com/prabhu-gi",
+    liveDemoUrl: "http://localhost:5500",
+    githubUrl: "https://github.com/Prabhu-gi/Bakery",
     capabilities: [
-      "Designed and coded 5 high-converting responsive landing pages",
-      "Implemented asynchronous AJAX data fetching and client-side validation",
-      "Ensured pixel-perfect rendering across mobile, tablet, and desktop viewports"
+      "Crafted custom theme cake showcase featuring interactive image enlargement",
+      "Designed responsive pastry and cake category browsing with smooth transitions",
+      "Engineered clean semantic HTML5 layout with mobile-first CSS3 Flexbox and Grid",
+      "Integrated intuitive quick-links footer and customer order interaction flow"
     ]
   }
 ];
