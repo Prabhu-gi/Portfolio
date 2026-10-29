@@ -1,9 +1,16 @@
+export interface ProjectScreen {
+  label: string;
+  image: string;
+  caption?: string;
+}
+
 export interface Project {
   number: string;
   title: string;
   category: string;
   description: string;
   image: string;
+  screenshots?: ProjectScreen[];
   tags: string[];
   metrics: { label: string; value: string }[];
   liveDemoUrl?: string;
@@ -225,6 +232,13 @@ export const projectsData: Project[] = [
     category: "EDUCATIONAL & CAREER HUB",
     description: "An end-to-end educational web platform engineered with Java, Spring Boot, React.js, and MySQL. Features dynamic media galleries, modular course hierarchies, student onboarding workflows, and atomic accessible UI components that accelerated frontend feature delivery by 30%.",
     image: "/assets/tega-platform.jpg",
+    screenshots: [
+      { label: "Placement Prep", image: "/assets/tega-screen-prep.jpg", caption: "Interactive Skill Assessments & Top Company Preparation" },
+      { label: "Course Catalog", image: "/assets/tega-screen-courses.jpg", caption: "Modular Technical Courses (VLSI, Data Analytics, ML) & Payment" },
+      { label: "Job Opportunities", image: "/assets/tega-screen-jobs.jpg", caption: "Verified Tech Job Openings & Direct Candidate Applications" },
+      { label: "Internships", image: "/assets/tega-screen-internships.jpg", caption: "Industry Internships with S&P Global, Google, & Top Tech" },
+      { label: "Student Login", image: "/assets/tega-screen-login.jpg", caption: "Official Student Portal Login & Activity Verification" }
+    ],
     tags: ["React.js", "Java", "Spring Boot", "REST APIs", "MySQL", "WCAG A11y"],
     metrics: [
       { label: "Feature Delivery", value: "+30%" },
