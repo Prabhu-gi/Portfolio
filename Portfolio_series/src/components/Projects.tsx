@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { ArrowUpRight, Github, ExternalLink, Maximize2, X, Layers } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, Maximize2, X } from 'lucide-react';
 import { projectsData, personalInfo } from '../data/portfolio';
 
 export default function Projects() {
-  const [activeScreens, setActiveScreens] = useState<Record<string, number>>({});
   const [previewModal, setPreviewModal] = useState<{
     isOpen: boolean;
     image: string;
@@ -52,14 +51,6 @@ export default function Projects() {
         <div className="space-y-32 sm:space-y-40">
           {projectsData.map((project, index) => {
             const isEven = index % 2 === 1;
-            const currentScreenIdx = activeScreens[project.number] ?? 0;
-            const hasScreenshots = project.screenshots && project.screenshots.length > 0;
-            const activeImage = hasScreenshots
-              ? project.screenshots![currentScreenIdx].image
-              : project.image;
-            const activeCaption = hasScreenshots
-              ? project.screenshots![currentScreenIdx].caption
-              : undefined;
 
             return (
               <div
@@ -76,17 +67,17 @@ export default function Projects() {
                     onClick={() =>
                       setPreviewModal({
                         isOpen: true,
-                        image: activeImage,
+                        image: project.image,
                         title: project.title,
-                        caption: activeCaption,
+                        caption: project.icon ? 'Official tegaedu.com Platform' : undefined,
                       })
                     }
                     className="cursor-pointer group/img relative aspect-[16/10] overflow-hidden rounded-xl bg-neutral-900 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
                   >
                     <img
-                      src={activeImage}
+                      src={project.image}
                       alt={project.title}
-                      className="h-full w-full object-cover object-top opacity-95 transition-all duration-500 ease-out group-hover/img:scale-[1.02] group-hover/img:opacity-100"
+                      className="h-full w-full object-cover object-center opacity-95 transition-all duration-500 ease-out group-hover/img:scale-[1.02] group-hover/img:opacity-100"
                     />
                     {/* Subtle hover gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover/img:opacity-30 transition-opacity duration-500" />
@@ -98,55 +89,28 @@ export default function Projects() {
                       </span>
                     </div>
 
-                    {/* Expand icon on hover */}
-                    <div className="absolute top-4 right-4 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300">
+                    {/* Official icon pill on image if available (e.g. tegaedu.com) */}
+                    {project.icon && (
+                      <div className="absolute top-4 right-4 flex items-center gap-2 rounded-full bg-black/80 backdrop-blur-md px-3 py-1.5 border border-white/20 shadow-md pointer-events-none">
+                        <img
+                          src={project.icon}
+                          alt="tegaedu.com icon"
+                          className="h-5 w-5 rounded-full bg-white object-contain"
+                        />
+                        <span className="text-[11px] font-bold text-white tracking-wider">
+                          tegaedu.com
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Expand icon on hover (bottom right) */}
+                    <div className="absolute bottom-4 right-4 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300">
                       <span className="flex items-center gap-1.5 rounded-full bg-black/80 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-white border border-white/20 shadow-md">
                         <Maximize2 className="h-3 w-3 text-[#CCFF00]" />
-                        <span>Inspect Screen</span>
+                        <span>Inspect</span>
                       </span>
                     </div>
                   </div>
-
-                  {/* Screenshots gallery switcher for projects with multiple screens (TEGA) */}
-                  {hasScreenshots && (
-                    <div className="mt-4 pt-3 border-t border-white/10 flex flex-col gap-2.5">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-[11px] font-bold uppercase tracking-widest text-[#CCFF00] flex items-center gap-1 mr-1">
-                          <Layers className="h-3.5 w-3.5" />
-                          Platform Views:
-                        </span>
-                        {project.screenshots!.map((screen, sIdx) => {
-                          const isActive = currentScreenIdx === sIdx;
-                          return (
-                            <button
-                              key={screen.label}
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setActiveScreens((prev) => ({
-                                  ...prev,
-                                  [project.number]: sIdx,
-                                }));
-                              }}
-                              className={`cursor-pointer rounded-full px-3 py-1 text-[11px] font-semibold tracking-wide transition-all duration-200 border ${
-                                isActive
-                                  ? 'bg-[#CCFF00] text-black border-[#CCFF00] shadow-[0_0_12px_rgba(204,255,0,0.35)]'
-                                  : 'bg-white/5 text-zinc-300 border-white/10 hover:border-white/30 hover:bg-white/10 hover:text-white'
-                              }`}
-                            >
-                              {screen.label}
-                            </button>
-                          );
-                        })}
-                      </div>
-
-                      {activeCaption && (
-                        <p className="text-xs text-zinc-400 italic">
-                          <span className="text-zinc-500 font-normal">Active Screen:</span> {activeCaption}
-                        </p>
-                      )}
-                    </div>
-                  )}
                 </div>
 
                 {/* Text Content Column */}
@@ -160,10 +124,26 @@ export default function Projects() {
                     {project.number}
                   </span>
 
-                  {/* Title */}
-                  <h3 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-white mb-4 leading-tight">
-                    {project.title}
-                  </h3>
+                  {/* Title with optional project icon */}
+                  <div className="flex items-center gap-3.5 mb-4">
+                    {project.icon && (
+                      <img
+                        src={project.icon}
+                        alt={`${project.title} icon`}
+                        className="h-11 w-11 sm:h-12 sm:w-12 rounded-full border border-white/25 bg-white p-1 object-contain shadow-lg shrink-0"
+                      />
+                    )}
+                    <div>
+                      <h3 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-white leading-tight">
+                        {project.title}
+                      </h3>
+                      {project.icon && (
+                        <span className="text-[11px] font-mono text-[#CCFF00] tracking-wider uppercase block mt-0.5">
+                          tegaedu.com
+                        </span>
+                      )}
+                    </div>
+                  </div>
 
                   {/* Description */}
                   <p className="text-sm sm:text-base text-zinc-400 font-light leading-relaxed mb-6">
