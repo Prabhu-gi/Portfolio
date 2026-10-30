@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowUpRight, Github, ExternalLink, Maximize2, X } from 'lucide-react';
+import { ArrowUpRight, Github, ExternalLink, Maximize2, X, CheckCircle2 } from 'lucide-react';
 import { projectsData, personalInfo } from '../data/portfolio';
 
 export default function Projects() {
@@ -157,6 +157,24 @@ export default function Projects() {
                   <p className="text-sm sm:text-base text-zinc-400 font-light leading-relaxed mb-6">
                     {project.description}
                   </p>
+
+                  {/* Key Architecture Features */}
+                  {project.features && project.features.length > 0 && (
+                    <div className="mb-6 space-y-2">
+                      <p className="text-[11px] font-bold uppercase tracking-widest text-[#CCFF00] flex items-center gap-1.5 mb-2.5">
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#CCFF00]" />
+                        Key Features
+                      </p>
+                      <ul className="space-y-2">
+                        {project.features.map((feat, idx) => (
+                          <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
+                            <CheckCircle2 className="h-4 w-4 text-[#CCFF00] shrink-0 mt-0.5" />
+                            <span>{feat}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   {/* Verified Metrics Grid */}
                   <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-white/[0.03] border border-white/10">

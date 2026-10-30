@@ -147,11 +147,6 @@ export default function Footer() {
         {/* 5. Minimal Bottom Legal & Copyright Bar */}
         <div className="w-full pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-zinc-500">
           <p>© {new Date().getFullYear()} Voleti Prabhu Kranthi. All Rights Reserved.</p>
-          <p className="flex items-center gap-2">
-            <span>Built with React &amp; Tailwind CSS</span>
-            <span>·</span>
-            <span className="text-[#CCFF00]">Verified Resume Credentials</span>
-          </p>
         </div>
       </div>
     </footer>

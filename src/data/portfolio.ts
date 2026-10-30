@@ -9,7 +9,8 @@ export interface Project {
   metrics: { label: string; value: string }[];
   liveDemoUrl?: string;
   githubUrl?: string;
-  capabilities: string[];
+  features: string[];
+  capabilities?: string[];
 }
 
 export interface Service {
@@ -114,10 +115,10 @@ export const skillsMarquee = {
     "Java 17", "Spring Boot", "RESTful APIs", "Spring Security", "JWT Authentication", "Spring Data JPA", "Hibernate", "Bean Validation"
   ],
   row3: [
-    "MongoDB", "MySQL", "SQL", "JDBC", "Schema Design", "Docker", "Maven", "Git", "GitHub Flow"
+    "MongoDB", "MySQL", "SQL", "JDBC", "Schema Design", "DBMS", "Docker", "Maven", "Git"
   ],
   row4: [
-    "JUnit", "Mockito", "Postman", "VS Code", "Eclipse", "JIRA", "Linux Shell", "OOP", "Data Structures & Algorithms", "DBMS"
+    "JUnit", "Mockito", "Postman", "VS Code", "Eclipse", "JIRA", "Linux Shell", "OOP", "Data Structures & Algorithms", "GitHub"
   ]
 };
 
@@ -212,7 +213,12 @@ export const projectsData: Project[] = [
       { label: "Staging Setup Cut", value: "40%" }
     ],
     liveDemoUrl: "#contact",
-    githubUrl: "https://github.com/prabhu-gi",
+    features: [
+      "Modular Spring Boot 3 microservice architecture powering customer and communication workflows",
+      "High-performance compound MongoDB indexes reducing query latency by 35% (< 200ms retrieval)",
+      "Stateless JWT authentication with granular Role-Based Access Control (Admin/User privileges)",
+      "Docker containerization with automated Maven builds cutting staging & deployment time by 40%"
+    ],
     capabilities: [
       "Built 4 modular backend domains (customers, communication logs, analytics, auth)",
       "Engineered compound MongoDB indexes to accelerate high-frequency lookups",
@@ -234,7 +240,12 @@ export const projectsData: Project[] = [
       { label: "Accessibility", value: "WCAG AA" }
     ],
     liveDemoUrl: "https://tegaedu.com",
-    githubUrl: "https://github.com/prabhu-gi",
+    features: [
+      "Dynamic hierarchical course catalog and interactive learning portal with Spring Boot and MySQL",
+      "Modular, reusable atomic React UI component system built strictly to WCAG AA accessibility standards",
+      "REST API performance tuning with optimized indexing reducing payload transmission overhead by 25%",
+      "Integrated student onboarding, progress tracking, and role-based instructor dashboards"
+    ],
     capabilities: [
       "Engineered dynamic course catalog with hierarchical category browsing",
       "Authored a modular, atomic React UI component library",
@@ -257,6 +268,12 @@ export const projectsData: Project[] = [
     ],
     liveDemoUrl: "http://localhost:3000",
     githubUrl: "https://github.com/Prabhu-gi/Shopsphere",
+    features: [
+      "Full-stack e-commerce architecture engineered with Java 17, Spring Boot 3, and React 18",
+      "Distributed Redis caching layer cutting database read workloads by 45% with sub-50ms responses",
+      "Secure token-based auth flow with JWT access/refresh rotation and protected checkout routes",
+      "Real-time cart state management, product filtering, and multi-service Docker Compose deployment"
+    ],
     capabilities: [
       "Engineered layered Spring Boot REST APIs with JWT & Refresh token security",
       "Integrated Redis caching layer reducing database read load by 45%",
@@ -279,6 +296,12 @@ export const projectsData: Project[] = [
     ],
     liveDemoUrl: "http://localhost:5500",
     githubUrl: "https://github.com/Prabhu-gi/Bakery",
+    features: [
+      "Interactive artisan theme cake showcase with high-resolution image preview & detail modal",
+      "Mobile-first responsive architecture built with pure semantic HTML5, modern CSS3 Flexbox and Grid",
+      "Ultra-fast page delivery loading under 1.0 second with zero heavy external library overhead",
+      "Streamlined pastry menu navigation, customer inquiry flow, and touch-optimized mobile controls"
+    ],
     capabilities: [
       "Crafted custom theme cake showcase featuring interactive image enlargement",
       "Designed responsive pastry and cake category browsing with smooth transitions",
