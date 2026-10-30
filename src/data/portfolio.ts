@@ -32,7 +32,7 @@ export const personalInfo = {
   location: "Andhra Pradesh, India",
   github: "https://github.com/prabhu-gi",
   linkedin: "https://linkedin.com/in/prabhukranthi",
-  aboutText: "An enthusiastic Java Full Stack Developer with hands-on experience building production-grade Spring Boot REST APIs, MongoDB and MySQL data layers, and Docker-based deployments. Built core PRISM ERP modules at Sandspace Technologies cutting query latency by 35% through optimized compound indexing. Experienced in JWT/RBAC security, JUnit & Mockito automated testing (85%+ coverage), and modular React frontend development.",
+  aboutText: "An enthusiastic Java Full Stack Developer with hands-on experience building production-grade Spring Boot REST APIs, MongoDB and MySQL data layers, and Docker-based deployments. Built core enterprise modules at Sandspace Technologies cutting query latency by 35% through optimized compound indexing. Experienced in JWT/RBAC security, JUnit & Mockito automated testing (85%+ coverage), and modular React frontend development.",
   aboutHighlights: ["Java 17", "Spring Boot", "React.js", "MongoDB", "REST APIs", "Docker"],
   education: [
     {
@@ -115,10 +115,10 @@ export const skillsMarquee = {
     "Java 17", "Spring Boot", "RESTful APIs", "Spring Security", "JWT Authentication", "Spring Data JPA", "Hibernate", "Bean Validation"
   ],
   row3: [
-    "MongoDB", "MySQL", "SQL", "JDBC", "Schema Design", "DBMS", "Docker", "Maven", "Git"
+    "MongoDB", "MySQL", "SQL", "JDBC", "DBMS", "Schema Design", "Docker", "Maven", "Git", "GitHub"
   ],
   row4: [
-    "JUnit", "Mockito", "Postman", "VS Code", "Eclipse", "JIRA", "Linux Shell", "OOP", "Data Structures & Algorithms", "GitHub"
+    "JUnit", "Mockito", "Postman", "VS Code", "Eclipse", "JIRA", "Linux Shell", "OOP", "Data Structures & Algorithms"
   ]
 };
 
@@ -214,16 +214,16 @@ export const projectsData: Project[] = [
     ],
     liveDemoUrl: "#contact",
     features: [
-      "Modular Spring Boot 3 microservice architecture powering customer and communication workflows",
-      "High-performance compound MongoDB indexes reducing query latency by 35% (< 200ms retrieval)",
-      "Stateless JWT authentication with granular Role-Based Access Control (Admin/User privileges)",
-      "Docker containerization with automated Maven builds cutting staging & deployment time by 40%"
+      "Customer & client lifecycle management",
+      "Project pipeline & team workload tracking",
+      "Communication logs & follow-up reminders",
+      "Role-based access control (Admin & User)"
     ],
     capabilities: [
-      "Built 4 modular backend domains (customers, communication logs, analytics, auth)",
-      "Engineered compound MongoDB indexes to accelerate high-frequency lookups",
-      "Containerized microservices with Docker reducing deployment overhead by 40%",
-      "Enforced Bean Validation and 85%+ JUnit/Mockito test coverage"
+      "Customer & client lifecycle management",
+      "Project pipeline & team workload tracking",
+      "Communication logs & follow-up reminders",
+      "Role-based access control (Admin & User)"
     ]
   },
   {
@@ -241,16 +241,16 @@ export const projectsData: Project[] = [
     ],
     liveDemoUrl: "https://tegaedu.com",
     features: [
-      "Dynamic hierarchical course catalog and interactive learning portal with Spring Boot and MySQL",
-      "Modular, reusable atomic React UI component system built strictly to WCAG AA accessibility standards",
-      "REST API performance tuning with optimized indexing reducing payload transmission overhead by 25%",
-      "Integrated student onboarding, progress tracking, and role-based instructor dashboards"
+      "Course catalog & video lesson streaming",
+      "Student onboarding & enrollment portal",
+      "Role-based dashboards for students & faculty",
+      "Student progress reports & test analytics"
     ],
     capabilities: [
-      "Engineered dynamic course catalog with hierarchical category browsing",
-      "Authored a modular, atomic React UI component library",
-      "Built optimized REST APIs with Spring Boot and relational MySQL schema",
-      "Implemented role-based dashboard for instructors and students"
+      "Course catalog & video lesson streaming",
+      "Student onboarding & enrollment portal",
+      "Role-based dashboards for students & faculty",
+      "Student progress reports & test analytics"
     ]
   },
   {
@@ -264,21 +264,20 @@ export const projectsData: Project[] = [
       { label: "Cache Response", value: "< 50ms" },
       { label: "API Endpoints", value: "20+" },
       { label: "Test Coverage", value: "85%" },
-      { label: "Local Port", value: ":3000" }
+      { label: "Data Architecture", value: "MySQL + Redis" }
     ],
-    liveDemoUrl: "http://localhost:3000",
     githubUrl: "https://github.com/Prabhu-gi/Shopsphere",
     features: [
-      "Full-stack e-commerce architecture engineered with Java 17, Spring Boot 3, and React 18",
-      "Distributed Redis caching layer cutting database read workloads by 45% with sub-50ms responses",
-      "Secure token-based auth flow with JWT access/refresh rotation and protected checkout routes",
-      "Real-time cart state management, product filtering, and multi-service Docker Compose deployment"
+      "Product catalog browsing with smart filters",
+      "Shopping cart & instant checkout flow",
+      "User account & past order history tracking",
+      "Fast product search with Redis caching"
     ],
     capabilities: [
-      "Engineered layered Spring Boot REST APIs with JWT & Refresh token security",
-      "Integrated Redis caching layer reducing database read load by 45%",
-      "Built responsive React storefront with category browsing and cart checkout",
-      "Containerized full-stack architecture with Docker Compose and MySQL"
+      "Product catalog browsing with smart filters",
+      "Shopping cart & instant checkout flow",
+      "User account & past order history tracking",
+      "Fast product search with Redis caching"
     ]
   },
   {
@@ -292,21 +291,20 @@ export const projectsData: Project[] = [
       { label: "Mobile Responsive", value: "100%" },
       { label: "Theme Showcase", value: "Artisan Cakes" },
       { label: "Page Load", value: "< 1.0s" },
-      { label: "Local Port", value: ":5500" }
+      { label: "Design System", value: "CSS3 Flex & Grid" }
     ],
-    liveDemoUrl: "http://localhost:5500",
     githubUrl: "https://github.com/Prabhu-gi/Bakery",
     features: [
-      "Interactive artisan theme cake showcase with high-resolution image preview & detail modal",
-      "Mobile-first responsive architecture built with pure semantic HTML5, modern CSS3 Flexbox and Grid",
-      "Ultra-fast page delivery loading under 1.0 second with zero heavy external library overhead",
-      "Streamlined pastry menu navigation, customer inquiry flow, and touch-optimized mobile controls"
+      "Custom theme cake showcase with high-res previews",
+      "Categorized bakery menu & fresh pastry selections",
+      "Direct online inquiry & custom cake ordering",
+      "Mobile-friendly touch navigation & instant loading"
     ],
     capabilities: [
-      "Crafted custom theme cake showcase featuring interactive image enlargement",
-      "Designed responsive pastry and cake category browsing with smooth transitions",
-      "Engineered clean semantic HTML5 layout with mobile-first CSS3 Flexbox and Grid",
-      "Integrated intuitive quick-links footer and customer order interaction flow"
+      "Custom theme cake showcase with high-res previews",
+      "Categorized bakery menu & fresh pastry selections",
+      "Direct online inquiry & custom cake ordering",
+      "Mobile-friendly touch navigation & instant loading"
     ]
   }
 ];

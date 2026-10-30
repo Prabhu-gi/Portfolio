@@ -90,7 +90,7 @@ export default function About() {
               {/* Quick Resume Badges */}
               <div className="flex flex-wrap gap-2 pt-2 border-t border-white/10">
                 <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-zinc-300">
-                  Sandspace Technologies (PRISM ERP)
+                  Sandspace Technologies
                 </span>
                 <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-zinc-300">
                   35% Query Latency Cut
